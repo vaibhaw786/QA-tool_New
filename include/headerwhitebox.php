@@ -6,12 +6,9 @@
                   $msg = "Download Example CSV";
                   break;
             case 3:
-                  $msg = "Upload Images Zip File";
-                  break;
-            case 4:
                   $msg = "Upload CSV";
                   break;
-            case 5:
+            case 4:
                   $msg = "CSV Confirmation";
                   break;
       }

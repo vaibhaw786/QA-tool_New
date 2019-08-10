@@ -47,7 +47,7 @@ function ZipOpener($target_file, $target_dir) {
         unlink($loc . '.zip');
         $_SESSION["upcsv"] = 1;
         ?><script>
-        window.location.href="https://thelocallighthouse.com/Post-and-Q-A-tool/?s=4";
+        window.location.href="<?php echo BASE_URL; ?>/?s=4";
         </script>
             <?php
     } else {

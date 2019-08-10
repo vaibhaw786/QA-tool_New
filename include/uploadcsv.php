@@ -6,7 +6,7 @@
     </form></center>
     <?php
     if (isset($_REQUEST['uploadsubmit'])) {
-        
+
         $target_dir = "assets/uploads/" . session_id() . '/';
         $imageFileType = strtolower(pathinfo($target_dir . $_FILES["fileToCSV"]["name"], PATHINFO_EXTENSION));
         $target_file = $target_dir . basename(session_id() . '.' . $imageFileType);
@@ -28,9 +28,9 @@
 // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToCSV"]["tmp_name"], $target_file)) {
-                echo 'upsdata'.$_SESSION["ShowCSV"]=1; 
+                echo 'upsdata'.$_SESSION["ShowCSV"]=1;
                 ?><script>
-        window.location.href="https://thelocallighthouse.com/Post-and-Q-A-tool/?s=5";
+        window.location.href="<?php echo BASE_URL; ?>/?s=4";
         </script>
             <?php
             } else {
@@ -38,7 +38,7 @@
             }
         }
     } else {
-       
+
     }
 }
 ?>

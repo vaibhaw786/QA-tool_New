@@ -62,14 +62,12 @@
                 if ($_SESSION['step'] == 2) {
                     include 'include/Location.php';
                     #include 'include/test.php';
+                    $_SESSION["upcsv"] = 1;
                 }
                 if ($_SESSION['step'] == 3) {
-                    include 'include/uploadzip.php';
-                }
-                if ($_SESSION['step'] == 4) {
                     include 'include/uploadcsv.php';
                 }
-                if ($_SESSION['step'] == 5) {
+                if ($_SESSION['step'] == 4) {
                     include 'include/Showcsv.php';
                 }
                 include 'include/footerwhitebox.php';

@@ -16,18 +16,6 @@ if (isset($_SESSION["ShowCSV"]) && $_SESSION["ShowCSV"] == 1) {
         $j=0;
         foreach ($FileData as $v)
         {
-            if($i>0 && ($j==8 || $j==13 || $j==16))
-            {
-                $url='assets/uploads/'.session_id().'/'.$v;
-                $url1=BASE_URI.'assets/uploads/'.session_id().'/'.$v;
-               # echo '<br>file:'.file_exists($url);
-                if(!file_exists($url1)){
-                    $url='assets/images/noimg.jpg';
-                }
-                $v='<img style="width:50px" src="'.$url.'">';
-            }
-
-
             echo '<'.$col.'>'.$v.'</'.$col.'>';
         $j++;
 
