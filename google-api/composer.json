@@ -1,0 +1,16 @@
+{
+    "name": "vendor/test",
+    "description": "test",
+    "type": "library",
+    "require": {
+        "google/apiclient": "^2.2.3"
+    },
+    "license": "1.0",
+    "authors": [
+        {
+            "name": "amit sharma",
+            "email": "lettertoamit@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

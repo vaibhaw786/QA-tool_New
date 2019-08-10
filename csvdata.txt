@@ -1,0 +1,1 @@
+["BusinessID,BusinessName,EventName,EventStartDate,EventEndDate,EventStartTime,EventEndTime,EventUrl,EventImage,OfferTitle,couponCode,couponurl,termsConditions,OfferImage,PostTitle,PostUrl,PostImage"]
