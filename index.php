@@ -73,8 +73,8 @@
                     include 'include/Showcsv.php';
                 }
                 include 'include/footerwhitebox.php';
-                
-                
+
+
                 //include 'include/create_post.php';
                 // r_print($location);
             } elseif (!isset($_SESSION['accountid']) && !isset($_SESSION['lacationid'])) {
