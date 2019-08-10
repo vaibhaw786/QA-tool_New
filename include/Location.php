@@ -14,12 +14,12 @@
 //r_print($_SERVER);
 
     $data = array();
-    $data[] = "BusinessID,BusinessName,EventName,EventStartDate,EventEndDate,EventStartTime,EventEndTime,EventUrl,EventImage,OfferTitle,couponCode,couponurl,termsConditions,OfferImage,PostTitle,PostUrl,PostImage";
+    $data[] = "BusinessID,BusinessName,Question,Answer";
     foreach ($_POST['accounts'] as $account) {
         $BUSINESSID = explode('/', json_decode(base64_decode($account))->name);
         $BUSINESSID = $BUSINESSID[count($BUSINESSID) - 1];
         $BUSINESSName = str_replace(',', '&nbsp;', json_decode(base64_decode($account))->locationName);
-        $data[] = $BUSINESSID . ',' . $BUSINESSName.',,,,,,,,,,,,,,,';
+        $data[] = $BUSINESSID . ',' . $BUSINESSName.',,';
     }
 file_put_contents('csvdata.txt', json_encode($data));
 
