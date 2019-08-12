@@ -3,25 +3,32 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 3 Aug, 2019, 1:56:20 PM
     Author     : admin
 */
 
-table {  
-    font-family: arial, sans-serif;  
-    border-collapse: collapse;  
-    width: 100%;  
-}  
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-td, th {  
-    border: 1px solid #dddddd;  
-    text-align: left;  
-    padding: 8px;  
-}  
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
 
-tr:nth-child(even) {  
-    background-color: #dddddd;  
-}  
-.steps.active{ font-weight: bolder;}
-.stepsdata{ text-align: center;}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.steps.active {
+    font-weight: bolder;
+}
+
+.stepsdata {
+    text-align: center;
+}

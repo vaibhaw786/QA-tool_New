@@ -29,4 +29,5 @@ if (isset($_SESSION["ShowCSV"]) && $_SESSION["ShowCSV"] == 1) {
     fclose($file);
 }
 ?><br><br>
+<div class="results"><div class="col-xs-12"></div></div>
 <center><a class="btn btn-primary">Now synchronize <i class="fa fa-refresh"></i></a></center>

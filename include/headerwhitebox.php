@@ -13,4 +13,6 @@
                   break;
       }
       ?>
-      <div class="white-box-heading">Step:<?php echo $_SESSION['step'] . ' ' . $msg; ?>  </div>
+      <div class="white-box-heading">
+            <a href="<?php echo BASE_URL; ?>?s=0" class=" pull-left"><i class="btn btn-success fa fa-home"></i></a>
+            Step:<?php echo $_SESSION['step'] . ' ' . $msg; ?>  </div>

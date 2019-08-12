@@ -32,11 +32,11 @@
             $GMB = google_auth_callback();
             $accounts = $GMB->accounts;
 
-            if (isset($_POST['accountid'])) {
-                $_SESSION['accountid'] = $_POST['accountid'];
+            if (isset($_REQUEST['accountid'])) {
+                $_SESSION['accountid'] = $_REQUEST['accountid'];
             }
-            if (isset($_POST['lacationid'])) {
-                $_SESSION['lacationid'] = $_POST['lacationid'];
+            if (isset($_REQUEST['lacationid'])) {
+                $_SESSION['lacationid'] = $_REQUEST['lacationid'];
             }
 
             if (isset($_SESSION['accountid']) && !isset($_SESSION['lacationid'])) {
