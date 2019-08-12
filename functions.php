@@ -2,8 +2,12 @@
 if (!session_id()) {
     session_start();
 }
-define('BASE_URL', 'https://thelocallighthouse.com/Post-and-Q-A-tool');
-define('BASE_URI', '/home/content/p3pnexwpnas07_data02/44/42654044/html/Post-and-Q-A-tool/');
+define('BASE_URL', 'https://thelocallighthouse.com/GMB_QA');
+define('BASE_URI', '/home/content/p3pnexwpnas07_data02/44/42654044/html/GMB_QA/');
+if (isset($_REQUEST['s']) && $_REQUEST['s'] == 0) {
+    unset($_SESSION['accountid']);
+    unset($_SESSION['lacationid']);
+}
 if (isset($_GET['logout'])) {
 
     session_destroy();
