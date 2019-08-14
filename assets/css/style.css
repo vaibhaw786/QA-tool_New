@@ -717,7 +717,6 @@ svg#Layer_1 {
     background-color: #6848c1;
 }
 
-
 .overflow table {
     margin-bottom: 25px;
 }
@@ -751,6 +750,20 @@ svg#Layer_1 {
     padding-bottom: 10px;
     padding-left: 10px;
     background-color: #f1f1f1;
+}
+
+label.searchtext {
+    width: 100%;
+    margin-bottom: 18px;
+    margin-top: 6px;
+}
+
+.searchinput {
+    width: 400px !important;
+    border-radius: 35px !important;
+    display: inline-block !important;
+    margin-left: 10px;
+    font-weight: 500;
 }
 
 /*------------------- Responsive Css Start -----------------*/
@@ -804,6 +817,10 @@ svg#Layer_1 {
     .great-start-my {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .searchinput {
+        width: 226px !important;
     }
 }
 
@@ -902,4 +919,11 @@ svg#Layer_1 {
     border-radius: 35px !important;
     background-color: #6848c1;
     border-color: #6848c1;
+}
+
+/*------------------- Responsive Css End -----------------*/
+
+.dropdowns {
+    width: 200px !important;
+    margin: 10px auto !important;
 }
