@@ -18,9 +18,9 @@ if (isset($_POST['accounts'])) {
 $data = array();
 $data[] = "BusinessID,BusinessName,Question,Answer";
 foreach ($_SESSION['accounts'] as $account) {
-      $BUSINESSID = explode('/', json_decode(base64_decode($account))->name);
+      $BUSINESSID = explode('/', json_decode($account)->name);
       $BUSINESSID = $BUSINESSID[count($BUSINESSID) - 1];
-      $BUSINESSName = str_replace(',', '&nbsp;', json_decode(base64_decode($account))->locationName);
+      $BUSINESSName = str_replace(',', '&nbsp;', json_decode($account)->locationName);
       $data[] = $BUSINESSID . ',' . $BUSINESSName . ',,';
 }
 file_put_contents('csvdata.txt', json_encode($data));

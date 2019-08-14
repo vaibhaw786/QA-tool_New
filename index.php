@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/functions.php'; ?>
 <?php include "./include/head.php"; ?>
-<body>
+<body ng-app="">
     <div class="top-header">
         <div class="container">
             <div class="row">
@@ -42,7 +42,12 @@
             if (isset($_SESSION['accountid']) && !isset($_SESSION['lacationid'])) {
                 $accountid = $_SESSION['accountid'];
                 $accountsList = $accounts->get($accountid);
-                $locations = $accounts->get($accountid . '/locations');
+                $pageToken = '';
+                if(!empty($_SESSION['nextPageToken'])) {
+                      $pageToken =  '&pageToken='.$_SESSION['nextPageToken'];
+                }
+                $locations = $accounts->get($accountid . '/locations?pageSize=100'.$pageToken);
+                $_SESSION['nextPageToken'] = $locations['nextPageToken'];
                 $c = count($locations['locations']);
                 if ($c > 0) {
                     $_SESSION['step'] = 1;
