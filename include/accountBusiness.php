@@ -1,4 +1,3 @@
-
                         <div class="white-box new-box-select">
                             <?php
                             $locations = json_encode($locations['locations']);
@@ -9,9 +8,21 @@
                             <div class="great-start-my">We've identified multiple accounts associated with Google. Please select one account to assess.<br> Remember, you can always come back anytime.</div>
                             <div class="table-box-select">
                                 <div class="table-box-select-new">
-                                    <form action="<?php echo $redirect; ?>" method="post">
+                                    <form action="<?php echo $redirect; ?>" method="post" class="alllocationform">
                                         <input type="hidden" name="lacationid" value="<?php echo $accountid; ?>" />
-                                        <label class="searchtext">Search: <input ng-model="searchText" class="form-control searchinput" placeholder="Enter Business Name"></label>
+                                        <label class="searchtext">Search: 
+                                         <div class="my-box-search">
+                                          <input class="form-control searchinput" placeholder="Enter Business Name"  value="">
+                                          <div class="my-box-search-fild">
+                                           <ul>
+                                            
+                                           </ul>
+                                          </div>
+                                         </div>
+                                         
+                                         <a href="#" class="btn btn-primary customsearch"><i class="fa fa-search"></i></a>
+                                         <a href="#" class="btn btn-primary searchspin"><i class="fa fa-refresh fa-spin"></i></a>
+                                        </label>
                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" id="searchTextResults">
                                             <thead>
                                                 <tr>

@@ -43,10 +43,14 @@
                 $accountid = $_SESSION['accountid'];
                 $accountsList = $accounts->get($accountid);
                 $pageToken = '';
-                if(!empty($_SESSION['nextPageToken'])) {
-                      $pageToken =  '&pageToken='.$_SESSION['nextPageToken'];
+                if(!empty($_GET['PageToken'])) {
+                      $pageToken =  '&pageToken='.$_GET['nextPageToken'];
                 }
-                $locations = $accounts->get($accountid . '/locations?pageSize=100'.$pageToken);
+                $filter = '';
+                if(!empty($_GET['filter'])) {
+                      $filter =  '&filter=location_name:%22'.$_GET['filter'].'%22';
+                }
+                $locations = $accounts->get($accountid . '/locations?pageSize=20'.$pageToken.$filter);
                 $_SESSION['nextPageToken'] = $locations['nextPageToken'];
                 $c = count($locations['locations']);
                 if ($c > 0) {
